@@ -6,14 +6,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./btn.component.css']
 })
 export class BtnComponent implements OnInit {
-  @Output() clicked = new EventEmitter<boolean>();
-
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  newClick(){
-    this.clicked.emit(true);
   }
 }

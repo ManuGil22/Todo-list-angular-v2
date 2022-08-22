@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from 'src/app/models/Task';
 
 @Component({
@@ -9,9 +9,14 @@ import { Task } from 'src/app/models/Task';
 
 export class TaskListComponent implements OnInit {
   @Input() taskList: Task[] = [];
+  @Output() deleteTask = new EventEmitter<number>();
 
   constructor() {  }
 
   ngOnInit(): void {
+  }
+
+  sendTaskId(event: any){
+    this.deleteTask.emit(event);
   }
 }

@@ -11,12 +11,17 @@ export class AppComponent {
   id = 0;
   tasksArray: Task[] = [];
 
-  getNewTask(event:string){
+  getNewTask(newTaskDescription:string){
     var newTask = {
       id: this.id,
-      task: event
+      task: newTaskDescription
     }
     this.id = this.id + 1;
     this.tasksArray.push(newTask);
+  }
+
+  deleteTaskById(event:any){
+    let tasksLeft = this.tasksArray.filter((obj) => {return obj.id != event});
+    this.tasksArray = [...tasksLeft];
   }
 }

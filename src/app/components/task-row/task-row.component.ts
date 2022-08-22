@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-task-row',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TaskRowComponent implements OnInit {
   @Input() taskDescription = '';
   @Input() taskId = '';
+  @Output() deleteTask = new EventEmitter<string>();
   taskCompleted = false ;
   
   constructor() { }
@@ -19,4 +20,7 @@ export class TaskRowComponent implements OnInit {
     this.taskCompleted = value;
   }
 
+  getTaskId(){
+    this.deleteTask.emit(this.taskId);
+  }
 }
