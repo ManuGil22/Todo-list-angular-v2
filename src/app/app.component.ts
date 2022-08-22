@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from './models/Task';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-list';
-  tasksArray: Array<string> = [];
+  id = 0;
+  tasksArray: Task[] = [];
 
   getNewTask(event:string){
-    this.tasksArray.push(event);
+    var newTask = {
+      id: this.id,
+      task: event
+    }
+    this.id = this.id + 1;
+    this.tasksArray.push(newTask);
   }
 }

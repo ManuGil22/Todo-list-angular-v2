@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TaskRowComponent implements OnInit {
   @Input() taskDescription = '';
+  @Input() taskId = '';
   taskCompleted = false ;
   
   constructor() { }

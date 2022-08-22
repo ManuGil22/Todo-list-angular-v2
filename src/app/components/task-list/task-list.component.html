@@ -1,8 +1,5 @@
 <div class="task-list">
-    <app-task-row taskDescription="Task N"></app-task-row>
-    <app-task-row taskDescription="Task N-1"></app-task-row>
-    <app-task-row taskDescription="Task N-2"></app-task-row>
-    <app-task-row taskDescription="Task K"></app-task-row>
-    <app-task-row taskDescription="Task 2"></app-task-row>
-    <app-task-row taskDescription="Task 1"></app-task-row>
+    <div *ngFor="let item of taskList">
+        <app-task-row taskDescription="{{item.task}}" taskId="{{item.id}}"></app-task-row>
+    </div>
 </div>
