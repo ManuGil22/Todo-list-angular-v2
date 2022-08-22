@@ -10,6 +10,7 @@ import { TaskComponent } from './components/task/task.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { DeleteBtnComponent } from './components/delete-btn/delete-btn.component';
 import { TaskRowComponent } from './components/task-row/task-row.component';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TaskRowComponent } from './components/task-row/task-row.component';
     CheckboxComponent,
     DeleteBtnComponent,
     TaskRowComponent,
+    AddTaskComponent,
   ],
   imports: [
     BrowserModule

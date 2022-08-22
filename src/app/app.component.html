@@ -1,8 +1,5 @@
 <div class="main">
   <app-header></app-header>
-  <div class="add-task-section">
-    <app-text-input></app-text-input>
-    <app-btn></app-btn>
-  </div>
+  <app-add-task (newTask)="getNewTask($event)"></app-add-task>
   <app-task-list></app-task-list>
 </div>

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-list';
+  tasksArray: Array<string> = [];
+
+  getNewTask(event:string){
+    this.tasksArray.push(event);
+  }
 }
