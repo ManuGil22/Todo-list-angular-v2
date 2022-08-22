@@ -1,0 +1,29 @@
+.task-list {
+    margin-top: 30px;
+    width: 370px;
+}
+
+.task-container{
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 0 10px;
+    display: flex;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.delete-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
