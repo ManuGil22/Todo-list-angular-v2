@@ -6,11 +6,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
-  @Input() taskDescription = '';
+  @Input() taskDescription = '' ;
+  @Input() completedTask = 'false' ;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }
