@@ -17,7 +17,7 @@ export class AppComponent {
       task: newTaskDescription
     }
     this.id = this.id + 1;
-    this.tasksArray.push(newTask);
+    this.tasksArray.splice(0, 0, newTask);
   }
 
   deleteTaskById(event:any){
